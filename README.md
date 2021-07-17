@@ -1,16 +1,15 @@
-# Pixel Art Maker Project
+# Pixel Art Maker Project - Revisited
 
-## Table of Contents
+This project has been created as part of the Udacity Developer Course JavaScript section, which I attended in 2017.
 
-* [Instructions](#instructions)
-* [Contributing](#contributing)
+![Pixel Art Maker](./PixelArtMaker.png)
 
-## Instructions
+The idea of the project was to create a table-like canvas, in which the user can color each cell with any color that he wants from a color picker. Technologies that you were supposed to use were HTML, CSS and JavaScript (jQuery optional).
 
-To get started, open `designs.js` and start building out the app's functionality.
+As a 2021 revisit and upgrade, I've made some changes to the source code:
 
-For specific, detailed instructions, look at the project instructions in the [Udacity Classroom](https://classroom.udacity.com/me).
-
-## Contributing
-
-This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
+- Remove jQuery and use VanillaJS instead;
+- Changed input numbers to range sliders (to prevent the user from entering ridiculous grid numbers);
+- Added CSS classes instead of applying styles on HTML tags;
+- Converted JavaScript code to ES6 arrow functions;
+- Added color functionality on click drag, rather than just on click.

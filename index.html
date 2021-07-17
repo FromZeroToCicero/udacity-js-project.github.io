@@ -1,29 +1,68 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Pixel Art Maker!</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton">
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-</head>
-<body>
-    <h1>Lab: Pixel Art Maker</h1>
+  <head>
+    <title>Pixel Art Maker - FromZeroToCicero</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-    <h2>Choose Grid Size</h2>
-    <form id="sizePicker">
-        Grid Height:
-        <input type="number" id="input_height" name="height" min="1" value="1">
-        Grid Width:
-        <input type="number" id="input_width" name="width" min="1" value="1">
-        <input type="submit">
+  <body class="pam-container">
+    <h1 class="pam-heading">Lab: Pixel Art Maker</h1>
+
+    <h2 class="pam-subheading">Choose the grid size</h2>
+    <form id="pam-size-picker" class="pam-size-picker">
+      <div class="pam-grid-setters">
+        <label for="pam-grid-height">Grid height:</label>
+        <input
+          type="range"
+          id="pam-grid-height"
+          class="pam-grid-setter"
+          name="pam-grid-height"
+          min="1"
+          max="75"
+          value="30"
+          onchange="updateHeight(this.value)"
+        />
+        <p id="grid-height-value" class="pam-text-value">20</p>
+        <label for="pam-grid-width">Grid width:</label>
+        <input
+          type="range"
+          id="pam-grid-width"
+          class="pam-grid-setter"
+          name="pam-grid-width"
+          min="1"
+          max="75"
+          value="30"
+          onchange="updateWidth(this.value)"
+        />
+        <p id="grid-width-value" class="pam-text-value">30</p>
+      </div>
+      <input
+        id="pam-grid-btn"
+        class="pam-grid-btn"
+        type="submit"
+        value="Generate"
+      />
     </form>
 
-    <h2>Pick A Color</h2>
-    <input type="color" id="colorPicker">
+    <h2 class="pam-subheading">Pick a color</h2>
+    <input type="color" id="pam-color-picker" />
 
-    <h2>Design Canvas</h2>
-    <table id="pixel_canvas"></table>
+    <h2 class="pam-subheading">Start drawing</h2>
+    <p class="pam-text-description">
+      You can color each cell by clicking it or by dragging the mouse over
+      multiple cells.
+    </p>
 
-    <script src="designs.js"></script>
-</body>
+    <table id="pam-pixel-table" class="pam-pixel-table">
+      <tbody></tbody>
+    </table>
+
+    <script src="script.js"></script>
+  </body>
 </html>

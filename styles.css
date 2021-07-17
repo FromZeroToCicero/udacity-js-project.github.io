@@ -1,40 +1,51 @@
-body {
-    text-align: center;
+.pam-container {
+  text-align: center;
+  font-family: Montserrat;
 }
 
-h1 {
-    font-family: Monoton;
-    font-size: 70px;
-    margin: 0.2em;
+.pam-heading {
+  font-size: 70px;
+  margin: 0.2em 0em;
 }
 
-h2 {
-    margin: 1em 0 0.25em;
+.pam-subheading {
+  margin: 1em 0em 0.4em 0em;
 }
 
-h2:first-of-type {
-    margin-top: 0.5em;
+.pam-text-value {
+  margin: 0em 1.6em 0em 0em;
 }
 
-table,
-tr,
-td {
-    border: 1px solid black;
+.pam-size-picker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-table {
-    border-collapse: collapse;
-    margin: 0 auto;
+.pam-grid-setters {
+  display: flex;
 }
 
-tr {
-    height: 20px;
+.pam-grid-setter {
+  margin: 0em 0.8em;
 }
 
-td {
-    width: 20px;
+.pam-grid-btn {
+  margin-top: 1em;
 }
 
-input[type=number] {
-    width: 6em;
+.pam-pixel-table,
+.pam-pixel-table-tr,
+.pam-pixel-table-td {
+  border: 1px solid black;
+}
+
+.pam-pixel-table {
+  border-collapse: collapse;
+  margin: 0 auto 5em auto;
+}
+
+.pam-pixel-table-td {
+  height: 20px;
+  width: 20px;
 }
